@@ -22,7 +22,7 @@ function getNativeComponentSafely() {
       typeof (UIManager as any).getViewManagerConfig === 'function'
         ? !!(UIManager as any).getViewManagerConfig('ARObjectScannerView')
         : typeof (UIManager as any).hasViewManagerConfig === 'function'
-          ? !!(UIManager as any).hasViewManagerConfig('ARObjectScannerView')
+          ? (UIManager as any).hasViewManagerConfig('ARObjectScannerView')
           : false;
 
     if (hasConfig) {
