@@ -1,4 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.scannerkit">
     <uses-sdk android:minSdkVersion="21" />
+
+    <!-- Optional camera declaration for fallback preview/capture -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera.any" android:required="false" />
 </manifest>

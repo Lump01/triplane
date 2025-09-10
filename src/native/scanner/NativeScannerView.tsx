@@ -53,7 +53,7 @@ export const NativeScannerView: React.FC<NativeScannerViewProps> = (props) => {
     return (
       <View style={[styles.fallbackContainer, style]}>
         <Text style={styles.title}>AR Scanner not linked</Text>
-        <Text style={styles.text}>Native AR module not found. Using photo-capture guidance instead.</Text>
+        <Text style={styles.text}>Native AR module not found. Using photo-capture guidance instead. If you installed expo-camera, grant camera permission to enable live preview.</Text>
         <PhotoCaptureGuided onProgress={onProgress} onError={onError} onCompleted={onCompleted} />
       </View>
     );

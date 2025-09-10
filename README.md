@@ -41,7 +41,7 @@ export default function ScannerScreen() {
 }
 ```
 
-If the native module is not linked, the component will render a guided photogrammetry UI as a fallback. You can fork the PhotoCaptureGuided component to integrate your actual camera (e.g., react-native-vision-camera or expo-camera) and upload the image set to a photogrammetry service (COLMAP/OpenMVG→OpenMVS, Meshroom, RealityCapture, etc.).
+If the native module is not linked, the component will render a guided photogrammetry UI as a fallback. If you have expo-camera installed and grant permission, a live camera preview is shown and tapping Capture will take real photos. You can also fork the PhotoCaptureGuided component to integrate your preferred camera (e.g., react-native-vision-camera) and upload the image set to a photogrammetry service (COLMAP/OpenMVG→OpenMVS, Meshroom, RealityCapture, etc.).
 
 ### iOS linking and ARKit integration
 - Autolinking (CocoaPods) discovers the podspec included with this package (`ScannerKit.podspec`) and links the native iOS sources in `ios/`.
